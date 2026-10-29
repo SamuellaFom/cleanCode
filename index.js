@@ -4,7 +4,7 @@ const isBrelan = (hand) => {
 
 const isColor = (hand) => {
   return hand.some(
-    (card) => hand.filter((c) => c.enseigne.name === card.enseigne.name) === 5,
+    (card) => hand.filter((c) => c.enseigne.name === card.enseigne.name).length === 5
   );
 };
 
