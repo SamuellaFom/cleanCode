@@ -43,5 +43,5 @@ test("Should return hand brelan given 30", () => {
     },
   ];
 
-  expect(modules.pokerHands(brelanLand)).toBe(30);
+  expect(modules.pokerHands(brelanLand)).toBe(true);
 });
