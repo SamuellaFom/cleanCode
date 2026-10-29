@@ -1,12 +1,20 @@
 function pokerHands(hand) {
-  const estBrelan = brelanLand.some(
-    (carte) => brelanLand.filter((c) => c.value === carte.value).length === 3,
-  );
+  let result = 0;
 
-  if (estBrelan) {
-    return true
+  const isBrelan = hand.some((card) => hand.filter((c) => c.value === card.value).length === 3,);
+
+  const isColor = hand.some((card) => hand.filter((c) => c.enseigne.name === card.enseigne.name) === 5,);
+  
+  
+
+  if (isBrelan) {
+    result += 30;
   }
 
-  return 0;
+  if (isColor) {
+    result += 45;
+  }
+
+  return result;
 }
 module.exports = { pokerHands };

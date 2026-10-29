@@ -4,8 +4,8 @@ test("Should return 0", () => {
   expect(modules.pokerHands([])).toBe(0);
 });
 
-test("Should return hand brelan given 30", () => {
-  const brelanLand = [
+test("Should return brelan hand given 30", () => {
+  const brelanHand = [
     {
       value: 2,
       enseigne: {
@@ -43,5 +43,48 @@ test("Should return hand brelan given 30", () => {
     },
   ];
 
-  expect(modules.pokerHands(brelanLand)).toBe(true);
+  expect(modules.pokerHands(brelanHand)).toBe(30);
+});
+
+
+test("Should return color hand given 45", () => {
+  const colorHand = [
+    {
+      value: 2,
+      enseigne: {
+        name: "Cœur",
+        couleur: "rouge",
+      },
+    },
+    {
+      value: 3,
+      enseigne: {
+        name: "Cœur",
+        couleur: "rouge",
+      },
+    },
+    {
+      value: 4,
+      enseigne: {
+        name: "Cœur",
+        couleur: "rouge",
+      },
+    },
+    {
+      value: 5,
+      enseigne: {
+        name: "Cœur",
+        couleur: "rouge",
+      },
+    },
+    {
+      value: 6,
+      enseigne: {
+        name: "Cœur",
+        couleur: "rouge",
+      },
+    },
+  ];
+
+  expect(modules.pokerHands(colorHand)).toBe(true);
 });
