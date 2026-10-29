@@ -4,7 +4,7 @@ test("Should return 0", () => {
   expect(modules.pokerHands([])).toBe(0);
 });
 
-test("Should return brelan hand given 30", () => {
+test("Should return brelan hand given true", () => {
   const brelanHand = [
     {
       value: 2,
@@ -46,7 +46,7 @@ test("Should return brelan hand given 30", () => {
   expect(modules.isBrelan(brelanHand)).toBe(true);
 });
 
-test("Should return color hand given 45", () => {
+test("Should return color hand given true", () => {
   const colorHand = [
     {
       value: 2,
@@ -165,5 +165,5 @@ test("Should return some of hands given 75", () => {
       },
     ],
   ];
-  expect(modules.pokerHands(colorHand)).toBe(75);
+  expect(modules.pokerHands(hands)).toBe(75);
 });
